@@ -1,0 +1,19 @@
+{
+  "name": "kpc-app-sample",
+  "repo": "yapcheahshen/kpc-app-sample",
+  "description": "sample ksanapc application",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "yapcheahshen/hello-world":"*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "kpc-app-sample.css"
+  ]
+}
