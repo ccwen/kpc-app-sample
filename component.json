@@ -5,8 +5,12 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "yapcheahshen/hello-world":"*"
+    "yapcheahshen/hello-world":"*",
+    "yapcheahshen/main":"*",
+    "facebook/react":"*"
   },
+  "paths": ["../components"],
+  
   "development": {},
   "license": "MIT",
   "main": "index.js",
