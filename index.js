@@ -1,3 +1,3 @@
+React=require('react');
 var main=require('main')
-var react=require('react');
-react.renderComponent(main(),document.getElementById("msg"));
+React.renderComponent(main(),document.getElementById("msg"));

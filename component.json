@@ -7,10 +7,10 @@
   "dependencies": {
     "yapcheahshen/hello-world":"*",
     "yapcheahshen/main":"*",
-    "facebook/react":"*"
+    "component/dom":"*"
   },
   "paths": ["../components"],
-  
+  "local":["facebook/react"],
   "development": {},
   "license": "MIT",
   "main": "index.js",
