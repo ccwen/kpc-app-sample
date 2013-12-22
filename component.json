@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "ksanaforge/kse": "*",
+    "ksanaforge/react-mixins": "*",
     "brighthas/bootstrap": "*",
     "component/jquery": "*",
     "yapcheahshen/hello-world": "*",

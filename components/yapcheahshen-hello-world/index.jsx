@@ -27,16 +27,17 @@ var CommentBox2 = React.createClass({
   }
 });
 var InputBox = React.createClass({
+  mixins:[React.addons.LinkedStateMixin],
   getInitialState: function() {
-    return {data: 1};
+    return {value: 'Hello!'};
   },  
   render: function() {
     return (
-    <form className="InputBox">
-        <input type="text" placeholder="Your name" />
-        <input type="text" placeholder="Say something..." />
-        <input type="submit" value="Post" />
-      </form>
+        <form onSubmit={this.handleSubmit}>
+          <input valueLink={this.linkState('value')} />
+          <button>add</button>
+          {this.state.value}
+        </form>
     );
   }
 });
