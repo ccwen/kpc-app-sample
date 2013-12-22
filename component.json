@@ -5,12 +5,19 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "yapcheahshen/hello-world":"*",
-    "yapcheahshen/main":"*",
-    "component/dom":"*"
+    "ksanaforge/kse": "*",
+    "brighthas/bootstrap": "*",
+    "component/jquery": "*",
+    "yapcheahshen/hello-world": "*",
+    "yapcheahshen/main": "*",
+    "yapcheahshen/test2": "*"
   },
-  "paths": ["../components"],
-  "local":["facebook/react"],
+  "paths": [
+    "../components"
+  ],
+  "local": [
+    "facebook/react"
+  ],
   "development": {},
   "license": "MIT",
   "main": "index.js",
@@ -18,6 +25,6 @@
     "index.js"
   ],
   "styles": [
-    "kpc-app-sample.css"
+    "index.css"
   ]
 }
