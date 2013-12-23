@@ -5,7 +5,7 @@ var searchworker=Require('search-worker');
 
 var Main = React.createClass({
   getInitialState: function() {
-    return {query: "this", db:"search3",result:{texts:[]}};   
+    return {query: "this", db:"sample",result:[]};   
   },
   render: function() {
     return ( 
@@ -20,7 +20,7 @@ var Main = React.createClass({
       this.setState({query:data});
   },
   resultready:function(data) {
-      this.setState({result:data});
+      this.setState({result:data.result});
   },
   componentWillMount:function() {
     mediator.subscribe("query.change",this.queryChange.bind(this));
