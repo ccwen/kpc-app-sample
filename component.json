@@ -5,16 +5,20 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "ksanaforge/kse": "*",
-    "ksanaforge/react-mixins": "*",
     "brighthas/bootstrap": "*",
+    "ajacksified/mediator": "*",
     "component/jquery": "*",
-    "yapcheahshen/hello-world": "*",
-    "yapcheahshen/main": "*",
-    "yapcheahshen/test2": "*"
+    "ksanaforge/kse": "*",
+    "ksanaforge/boot": "*",
+    "ksanaforge/query-input": "*",
+    "ksanaforge/result-list": "*",
+    "ksanaforge/react-mixins": "*",
+    "kpc-app-sample/main": "*",
+    "ksanaforge/search-worker": "*"
   },
   "paths": [
-    "../components"
+    "../components",
+    "../kse-ui/components"
   ],
   "local": [
     "facebook/react"
