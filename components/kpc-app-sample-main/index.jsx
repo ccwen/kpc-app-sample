@@ -22,7 +22,7 @@ var Main = React.createClass({
   queryChange:function(query) {
       this.setState({"query":query}); // searchworker will do it's work
   },
-  resultready:function(res) {
+  resultReady:function(res) {
       // receive from yase , res.result is an array
       // other information in res
       this.setState({"result":res.result});  
@@ -30,7 +30,7 @@ var Main = React.createClass({
   componentWillMount:function() {
     //install subscriber
     mediator.subscribe("query.change",this.queryChange.bind(this));
-    mediator.subscribe("result.ready",this.resultready.bind(this));
+    mediator.subscribe("result.ready",this.resultReady.bind(this));
   }
 });
 module.exports=Main;

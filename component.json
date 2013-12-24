@@ -8,6 +8,7 @@
     "brighthas/bootstrap": "*",
     "ajacksified/mediator": "*",
     "component/jquery": "*",
+    "socketio/socketio":"*",
     "ksanaforge/kse": "*",
     "ksanaforge/boot": "*",
     "ksanaforge/query-input": "*",
@@ -17,8 +18,9 @@
     "ksanaforge/search-worker": "*"
   },
   "paths": [
-    "../components",
-    "../kse-ui/components"
+    "components",
+    "../kse-ui/components",
+    "../components"
   ],
   "local": [
     "facebook/react"
