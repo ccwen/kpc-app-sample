@@ -13,8 +13,8 @@ var Main = React.createClass({
   render: function() { //top level layout
     return ( 
     	<div> 
-        <queryinput query={this.state.query}/>
-        <searchworker db={this.state.db} query={this.state.query}/>
+        <queryinput query={this.state.query} onQueryChange={this.queryChange}/>
+        <searchworker db={this.state.db} query={this.state.query} onResultReady={this.resultReady}/>
         <resultlist result={this.state.result}/>
       </div>
     ); 
@@ -26,11 +26,6 @@ var Main = React.createClass({
       // receive from yase , res.result is an array
       // other information in res
       this.setState({"result":res.result});  
-  },
-  componentWillMount:function() {
-    //install subscriber
-    mediator.subscribe("query.change",this.queryChange.bind(this));
-    mediator.subscribe("result.ready",this.resultReady.bind(this));
   }
-});
+}); 
 module.exports=Main;

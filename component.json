@@ -6,7 +6,6 @@
   "keywords": [],
   "dependencies": {
     "brighthas/bootstrap": "*",
-    "ajacksified/mediator": "*",
     "component/jquery": "*",
     "socketio/socketio":"*",
     "ksanaforge/kse": "*",
