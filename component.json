@@ -10,11 +10,11 @@
     "socketio/socketio":"*",
     "ksanaforge/kse": "*",
     "ksanaforge/boot": "*",
-    "ksanaforge/query-input": "*",
-    "ksanaforge/result-list": "*",
-    "ksanaforge/react-mixins": "*",
+    "kpc-app-sample/query-input": "*",
+    "kpc-app-sample/result-list": "*",
+    "ksanaforge/kse-mixins": "*",
     "kpc-app-sample/main": "*",
-    "ksanaforge/search-worker": "*"
+    "kpc-app-sample/search-worker": "*" 
   },
   "paths": [
     "components",

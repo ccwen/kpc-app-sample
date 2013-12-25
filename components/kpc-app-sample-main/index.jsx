@@ -1,14 +1,19 @@
 /** @jsx React.DOM */
 // the first line need double stars for jsx directive
+/*
+reference:
+http://facebook.github.io/react/docs/tutorial.html
+http://facebook.github.io/react/blog/2013/11/05/thinking-in-react.html
+http://blog.whn.se/post/69621609605/writing-good-react-components
+*/
 
-//Require("a") == require("../a")
 var queryinput=Require('query-input');   // publish query.change when input is changed
 var resultlist=Require('result-list');   // render search result
 var searchworker=Require('search-worker'); // invoke search engine, invisible component
 
 var Main = React.createClass({
   getInitialState: function() {
-    return {query: "this", db:"sample",result:[]};   //default values
+    return {query: "sutra text", db:"sample",result:[]};   //default values
   },
   render: function() { //top level layout
     return ( 
@@ -24,7 +29,6 @@ var Main = React.createClass({
   },
   resultReady:function(res) {
       // receive from yase , res.result is an array
-      // other information in res
       this.setState({"result":res.result});  
   }
 }); 
