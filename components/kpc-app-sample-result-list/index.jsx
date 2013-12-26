@@ -1,8 +1,9 @@
 /** @jsx React.DOM */
 var Result=React.createClass({ //for each result item
   render:function() {
-    var outhtml=this.props.id+")"+this.props.text;
-    return  <div className="resultitem" dangerouslySetInnerHTML={{__html: outhtml}} />
+    var abrigedhtml=this.props.id+")"+this.props.text;
+    return  <div className="resultitem" dangerouslySetInnerHTML={{__html: abrigedhtml}} />
+    //return <div>{abrigedhtml}</div>
   }
 }) 
 var Resultlist = React.createClass({

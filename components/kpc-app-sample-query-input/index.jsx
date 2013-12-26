@@ -4,7 +4,7 @@ var QueryInput = React.createClass({
     //list of PropTypes  http://facebook.github.io/react/docs/reusable-components.html
     onQueryChange: React.PropTypes.func.isRequired
   },
-  onChange:function(e) {
+  onChange:function() {
     if (this.timer) clearTimeout(this.timer);
 
     var handleInput=this.handleInput.bind(this);
