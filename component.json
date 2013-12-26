@@ -13,8 +13,7 @@
     "kpc-app-sample/query-input": "*",
     "kpc-app-sample/result-list": "*",
     "ksanaforge/kse-mixins": "*",
-    "kpc-app-sample/main": "*",
-    "kpc-app-sample/search-worker": "*" 
+    "kpc-app-sample/main": "*"
   },
   "paths": [
     "components",

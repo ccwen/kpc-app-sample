@@ -9,9 +9,9 @@ http://blog.whn.se/post/69621609605/writing-good-react-components
 
 var queryinput=Require('query-input');   // publish query.change when input is changed
 var resultlist=Require('result-list');   // render search result
-var searchworker=Require('search-worker'); // invoke search engine, invisible component
 
 var Main = React.createClass({
+  mixins:Require('kse-mixins'),
   getInitialState: function() {
     return {query: "sutra text", db:"sample",result:[]};   //default values
   },
@@ -19,17 +19,20 @@ var Main = React.createClass({
     return ( 
     	<div> 
         <queryinput query={this.state.query} onQueryChange={this.queryChange}/>
-        <searchworker db={this.state.db} query={this.state.query} onResultReady={this.resultReady}/>
         <resultlist result={this.state.result}/>
       </div>
     ); 
   },
   queryChange:function(query) {
-      this.setState({"query":query}); // searchworker will do it's work
+    this.setState({"state":query});
+    this.$yase("search",{db:this.state.db,query:query,output:["text"]})
+        .done(function(data){
+        //notify when search result ready
+        this.setState({"result":data.result});  
+    })
   },
-  resultReady:function(res) {
-      // receive from yase , res.result is an array
-      this.setState({"result":res.result});  
+  componentDidMount:function() {
+    this.queryChange(this.state.query);
   }
 }); 
 module.exports=Main;
