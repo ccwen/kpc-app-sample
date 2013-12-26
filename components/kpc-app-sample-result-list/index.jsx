@@ -11,7 +11,6 @@ var Resultlist = React.createClass({
        result: React.PropTypes.array.isRequired
   },
   shouldComponentUpdate:function(nextProps, nextState) {
-    //this is important , otherwise render will keep calling yase
     return nextProps.result!=this.props.result; 
   },
   render: function() {

@@ -27,7 +27,6 @@ var Main = React.createClass({
     this.setState({"state":query});
     this.$yase("search",{db:this.state.db,query:query,output:["text"]})
         .done(function(data){
-        //notify when search result ready
         this.setState({"result":data.result});  
     })
   },
