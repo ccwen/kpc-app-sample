@@ -16,12 +16,14 @@ var Main = React.createClass({
     return {query: "sutra text", db:"sample",result:[]};   //default values
   },
   render: function() { //top level layout
-    return ( 
-    	<div> 
-        <queryinput query={this.state.query} onQueryChange={this.queryChange}/>
-        <resultlist result={this.state.result}/>
-      </div>
-    ); 
+    if (this.state.ready) {
+      return ( 
+        <div> 
+          <queryinput query={this.state.query} onQueryChange={this.queryChange}/>
+          <resultlist result={this.state.result}/>
+        </div>
+      );       
+    } else return <div></div>;
   },
   queryChange:function(query) {
     this.setState({"state":query});
@@ -31,7 +33,13 @@ var Main = React.createClass({
     })
   },
   componentDidMount:function() {
-    this.queryChange(this.state.query);
-  }
+    var customfunc=null;
+    this.useDB(this.state.db,function(){
+      this.setState({ready:true});
+      this.queryChange(this.state.query);
+      console.log('db ready')      
+    })
+  },
+
 }); 
 module.exports=Main;

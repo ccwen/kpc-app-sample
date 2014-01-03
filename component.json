@@ -5,6 +5,8 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
+    "yadb":"*",
+    "yase":"*", 
     "brighthas/bootstrap": "*",
     "component/jquery": "*",
     "socketio/socketio":"*",
@@ -15,10 +17,11 @@
     "ksanaforge/kse-mixins": "*",
     "kpc-app-sample/main": "*"
   },
-  "paths": [
+  "paths": [ 
     "components",
     "../kse-ui/components",
-    "../components"
+    "../components",
+    "../node_modules/"
   ],
   "local": [
     "facebook/react"
@@ -27,7 +30,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": [
-    "index.js"
+    "index.js","sample.js"
   ],
   "styles": [
     "index.css"
